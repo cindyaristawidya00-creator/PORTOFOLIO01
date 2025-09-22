@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Cindy Aristawidya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #334155;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .content-section {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .content-section.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link { 
+            transition: color 0.2s, transform 0.2s;
+        }
+        .nav-link:hover {
+            color: #3b82f6;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <nav class="container flex justify-center space-x-8 text-lg font-semibold text-gray-600">
+            <a href="#biodata" class="nav-link" onclick="showSection('biodata')">Biodata</a>
+            <a href="#proyek" class="nav-link" onclick="showSection('proyek')">Proyek</a>
+            <a href="#prakarya" class="nav-link" onclick="showSection('prakarya')">Prakarya</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-8">
+
+        <!-- Biodata Section -->
+        <section id="biodata" class="content-section active bg-white p-8 rounded-xl shadow-lg">
+            <h1 class="text-4xl font-bold mb-6 text-center text-gray-800">Biodata</h1>
+            <div class="flex flex-col items-center space-y-6">
+                <img src="872312c2-7679-44dd-96e4-2f475f77539b.jpeg" alt="Foto Profil Cindy" class="profile-picture">
+                <div class="text-center">
+                    <p class="text-2xl font-semibold text-gray-700">Nama: Cindy Aristawidya</p>
+                    <p class="text-lg text-gray-600">Alamat: Gepor</p>
+                    <p class="text-lg text-gray-600">Tempat, Tanggal Lahir: Kendal, 02 Oktober 2009</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyek Section -->
+        <section id="proyek" class="content-section bg-white p-8 rounded-xl shadow-lg mt-8">
+            <h1 class="text-4xl font-bold mb-6 text-center text-gray-800">Proyek</h1>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h2 class="text-xl font-semibold mb-2 text-gray-800">Proyek 1</h2>
+                    <p class="text-gray-600">Deskripsi singkat tentang Proyek 1. Membuat website tentang biodata pahlawan, aku membuat biodata Tan Malaka.</p>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h2 class="text-xl font-semibold mb-2 text-gray-800">Proyek 2</h2>
+                    <p class="text-gray-600">Deskripsi singkat tentang Proyek 2. Proyek ini bertujuan untuk mendeskripsikan secara singkat tentang pahlawan Tan Malaka.</p>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h2 class="text-xl font-semibold mb-2 text-gray-800">Proyek 3</h2>
+                    <p class="text-gray-600">Deskripsi singkat tentang Proyek 3. Aku harap dengan proyek ini, kita bisa lebih mudah mengenal pahlawan kita Tan Malaka.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prakarya Section -->
+        <section id="prakarya" class="content-section bg-white p-8 rounded-xl shadow-lg mt-8">
+            <h1 class="text-4xl font-bold mb-6 text-center text-gray-800">Prakarya</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Prakarya 1 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h2 class="text-xl font-semibold mb-2 text-gray-800">Prakarya 1</h2>
+                    <p class="text-gray-600">Deskripsi singkat tentang Prakarya 1, Aku pernah membuat kerajinan tangan buket bunga untuk acara wisuda SMP ku.</p>
+                </div>
+                <!-- Prakarya 2 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <h2 class="text-xl font-semibold mb-2 text-gray-800">Prakarya 2</h2>
+                    <p class="text-gray-600">Deskripsi singkat tentang Prakarya 2. Bahan-bahan yang dibutuhkan : bunga plastik, kertas cello, gunting, selotip, gabus, tusuk sate.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.content-section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            function showSection(id) {
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById(id).classList.add('active');
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('text-blue-500');
+                    if (link.getAttribute('href').substring(1) === id) {
+                        link.classList.add('text-blue-500');
+                    }
+                });
+            }
+
+            // Initial section activation based on URL hash
+            const initialHash = window.location.hash.substring(1) || 'biodata';
+            showSection(initialHash);
+
+            // Add an event listener to the window's hashchange event
+            window.addEventListener('hashchange', () => {
+                const newHash = window.location.hash.substring(1) || 'biodata';
+                showSection(newHash);
+            });
+            
+            // Re-define showSection for direct function calls from onclick
+            window.showSection = showSection;
+        });
+    </script>
+</body>
+</html>
